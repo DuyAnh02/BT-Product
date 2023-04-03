@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="/BaiTapProduct/assest/css/img.css" />
+   
+  </head>
+  <style>
+    .header {
+    padding: 1rem 2%;
+    border-bottom: .1rem solid #f4f4f5;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 4.2rem;
+}
+
+
+
+.menu a {
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+    color: #888e98;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--color-blue);
+    border-bottom: .3rem solid var(--color-blue);
+    animation: all .5s;
+}
+
+.active {
+    color: var(--color-blue) !important;
+    border-bottom: .3rem solid var(--color-blue);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+input {
+    position: relative;
+    all: unset;
+    height: 30px;
+    width: 300px;
+    border: .1rem solid #f4f4f5;
+    background-color: #f3f4f6;
+    padding-left: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+}
+
+.input-icon {
+    position: absolute;
+    top: 20px;
+    left: 99.5rem;
+    font-size: 2rem;
+}
+
+
+.banner {
+    margin-top: 5rem;
+}
+
+
+
+.banner-tree-folder a {
+    font-size: 1.5rem;
+    color: #a0a4ae;
+}
+
+.banner-tree-folder a:nth-child(3) {
+    color: #737578 !important;
+}
+
+.banner-title {
+    margin: 1.5rem 0;
+    font-size: 8rem;
+}
+
+.banner-Evaluate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-review {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+
+}
+
+.banner-review span {
+    color: #9095a0;
+}
+
+.banner-options {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 4rem;
+}
+
+
+
+.banner-list {
+    margin: 1.5rem 0 3rem 0;
+    display: grid;
+    grid-template-areas:
+        "h1 h1 h2 h3"
+        "h1 h1 h4 h5"
+    ;
+    grid-gap: 1.6rem;
+}
+
+.banner-item img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.banner-item:first-child {
+    grid-area: h1;
+}
+
+.banner-item:nth-child(2) {
+    grid-area: h2;
+}
+
+.banner-item:nth-child(3) {
+    grid-area: h3;
+}
+
+.banner-item:nth-child(4) {
+    grid-area: h4;
+}
+
+.banner-item:nth-child(5) {
+    grid-area: h5;
+}
+
+.banner-desc {
+    margin: 6rem 0 0 0;
+    padding-bottom: 6rem;
+    border-bottom: .1rem solid #a0a4ae;
+}
+
+.row {
+    display: flex;
+
+}
+
+.col-1 {
+    flex-basis: 70%;
+    border-right: .1rem solid #f4f4f5;
+}
+
+.col-2 {
+    flex-basis: 30%;
+    margin-left: 2rem;
+}
+
+.banner-des {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+
+.banner-paragraph {
+    font-size: 2rem;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+}
+
+.banner-paragraph p {
+    margin: 1rem 0;
+}
+
+.banner-list-icon {
+    --f-columns: 2;
+    --f-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--f-gap));
+    margin-bottom: calc(-1 * var(--f-gap));
+    max-width: 410px;
+    margin-top: 4rem;
+}
+
+.banner-item-icon {
+    margin-left: var(--f-gap);
+    margin-bottom: var(--f-gap);
+    width: calc((100% / var(--f-columns) - var(--f-gap)));
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.salary {
+    text-align: right;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--color-blue);
+    margin-bottom: 2rem;
+}
+
+.col-2-sel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f4f6;
+    height: 40px;
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding-left: 1rem;
+    border-radius: 3px;
+}
+
+.col-2-icon i {
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.col-2-salary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.col-2-salary h1:first-child {
+    color: #9095a0;
+}
+
+.buy {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.buy a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--color-blue);
+    font-size: 2rem;
+    color: var(--color-white);
+    border-radius: 3px;
+}
+
+.add a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 2rem;
+    color: var(--color-blue);
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: .1rem solid var(--color-blue);
+    border-radius: 3px;
+    gap: 1rem;
+}
+.header {
+    padding: 1rem 2%;
+    border-bottom: .1rem solid #f4f4f5;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 4.2rem;
+}
+
+
+
+.menu a {
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+    color: #888e98;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: var(--color-blue);
+    border-bottom: .3rem solid var(--color-blue);
+    animation: all .5s;
+}
+
+.active {
+    color: var(--color-blue) !important;
+    border-bottom: .3rem solid var(--color-blue);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+
+.input-icon {
+    position: absolute;
+    top: 20px;
+    left: 99.5rem;
+    font-size: 2rem;
+}
+
+
+.banner {
+    margin-top: 5rem;
+}
+
+
+
+.banner-tree-folder a {
+    font-size: 1.5rem;
+    color: #a0a4ae;
+}
+
+.banner-tree-folder a:nth-child(3) {
+    color: #737578 !important;
+}
+
+.banner-title {
+    margin: 1.5rem 0;
+    font-size: 8rem;
+}
+
+.banner-Evaluate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-review {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+
+}
+
+.banner-review span {
+    color: #9095a0;
+}
+
+.banner-options {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 4rem;
+}
+
+
+
+.banner-list {
+    margin: 1.5rem 0 3rem 0;
+    display: grid;
+    grid-template-areas:
+        "h1 h1 h2 h3"
+        "h1 h1 h4 h5"
+    ;
+    grid-gap: 1.6rem;
+}
+
+.banner-item img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.banner-item:first-child {
+    grid-area: h1;
+}
+
+.banner-item:nth-child(2) {
+    grid-area: h2;
+}
+
+.banner-item:nth-child(3) {
+    grid-area: h3;
+}
+
+.banner-item:nth-child(4) {
+    grid-area: h4;
+}
+
+.banner-item:nth-child(5) {
+    grid-area: h5;
+}
+
+.banner-desc {
+    margin: 6rem 0 0 0;
+    padding-bottom: 6rem;
+    border-bottom: .1rem solid #a0a4ae;
+}
+
+.row {
+    display: flex;
+
+}
+
+.col-1 {
+    flex-basis: 70%;
+    border-right: .1rem solid #f4f4f5;
+}
+
+.col-2 {
+    flex-basis: 30%;
+    margin-left: 2rem;
+}
+
+.banner-des {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+
+.banner-paragraph {
+    font-size: 2rem;
+    line-height: 1.6;
+    letter-spacing: .1rem;
+}
+
+.banner-paragraph p {
+    margin: 1rem 0;
+}
+
+.banner-list-icon {
+    --f-columns: 2;
+    --f-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--f-gap));
+    margin-bottom: calc(-1 * var(--f-gap));
+    max-width: 410px;
+    margin-top: 4rem;
+}
+
+.banner-item-icon {
+    margin-left: var(--f-gap);
+    margin-bottom: var(--f-gap);
+    width: calc((100% / var(--f-columns) - var(--f-gap)));
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.salary {
+    text-align: right;
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--color-blue);
+    margin-bottom: 2rem;
+}
+
+.col-2-sel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f4f6;
+    height: 40px;
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding-left: 1rem;
+    border-radius: 3px;
+}
+
+.col-2-icon i {
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+
+.col-2-salary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.col-2-salary h1:first-child {
+    color: #9095a0;
+}
+
+.buy {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.buy a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--color-blue);
+    font-size: 2rem;
+    color: var(--color-white);
+    border-radius: 3px;
+}
+
+.add a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 2rem;
+    color: var(--color-blue);
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: .1rem solid var(--color-blue);
+    border-radius: 3px;
+    gap: 1rem;
+}
+  </style>
+  <body>
+    <div class="warrper">
+      <section id="header" class="header">
+        <nav>
+          <div class="nav-left">
+            <div class="logo">
+              <a href="#">
+                <img src="img/Image 1713.png" alt="" />
+              </a>
+            </div>
+            <div class="menu">
+              <a class="active" href="#">Home</a>
+              <a href="#">Promotions</a>
+              <a href="#">Best-sellers</a>
+              <a href="#">New releases</a>
+              <a href="#">Support</a>
+            </div>
+          </div>
+          <div class="nav-right">
+            <div class="nav-right-input">
+              <div class="input-icon">
+                <i class="uil uil-search"></i>
+              </div>
+              <input type="text" name="" id="" placeholder="Search..." />
+            </div>
+            <img src="img/Bell 1.png" alt="" />
+            <img
+              src="img/Shopping cart simple 1.png"
+              alt=""
+            />
+            <img src="img/Avatar 758.png" alt="" />
+          </div>
+        </nav>
+      </section>
+      <!-- start banner -->
+      <section class="banner" id="banner">
+        <div class="container">
+          <div class="banner-heading">
+            <div class="banner-tree-folder">
+              <a href="#">Home /</a>
+              <a href="#">Category /</a>
+              <a href="#">Product title</a>
+            </div>
+            <div class="banner-title">
+              <h1>Product title</h1>
+            </div>
+            <div class="banner-Evaluate">
+              <div class="banner-review">
+                <img src="img/Rating 303.png" alt="" />
+                <h1>4.2D</h1>
+                <span>(99 reviews)</span>
+              </div>
+              <div class="banner-options">
+                <div class="banner-option-share">
+                  <i class="uil uil-share-alt"></i>
+                  <span>Share</span>
+                </div>
+                <div class="banner-option-save">
+                  <i class="uil uil-heart-alt"></i>
+                  <span>Save</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner-list">
+            <div class="banner-item">
+              <a href="#">
+                <img src="img/Image 1705.png" alt="" />
+              </a>
+            </div>
+            <div class="banner-item">
+              <a href="#">
+                <img src="img/Image 1708.png" alt="" />
+              </a>
+            </div>
+            <div class="banner-item">
+              <a href="#">
+                <img src="img/Image 1707.png" alt="" />
+              </a>
+            </div>
+            <div class="banner-item">
+              <a href="#">
+                <img src="img/Image 1706.png" alt="" />
+              </a>
+            </div>
+            <div class="banner-item">
+              <a href="#">
+                <img src="img/Image 1709.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="banner-desc">
+            <div class="row">
+              <div class="col-1">
+                <div class="banner-des">
+                  <h1>Product description</h1>
+                </div>
+                <div class="banner-paragraph">
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum repellat porro consectetur dolorum voluptatem natus,
+                    sapiente reprehenderit error molestiae autem?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis natus fuga id voluptates eius quibusdam! Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Optio
+                    praesentium sint eum! Aliquam molestias sapiente corporis
+                    sed dolorem quibusdam delectus officia animi et, dignissimos
+                    minima non dolore veritatis vitae praesentium.
+                  </p>
+                </div>
+                <div class="banner-list-icon">
+                  <div class="banner-item-icon">
+                    <img src="img/Truck 1.png" alt="" />
+                    <span>Free delivery</span>
+                  </div>
+                  <div class="banner-item-icon">
+                    <img
+                      src="img/Arrow bend up left 1.png"
+                      alt=""
+                    />
+                    <span>7 days return</span>
+                  </div>
+                  <div class="banner-item-icon">
+                    <img src="img/Globe 1.png" alt="" />
+                    <span>Made in USA</span>
+                  </div>
+                  <div class="banner-item-icon">
+                    <img src="img/Medal 1.png" alt="" />
+                    <span>2 year guarantee</span>
+                  </div>
+                  <div class="banner-item-icon">
+                    <img
+                      src="img/Chat dots 1.png"
+                      alt=""
+                    />
+                    <span>100% Authentic</span>
+                  </div>
+                  <div class="banner-item-icon">
+                    <img src="img/Checks 1.png" alt="" />
+                    <span>24/7 customer support</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="salary">
+                  <h1>$99</h1>
+                </div>
+                <div class="col-2-sel">
+                  <h1>Color</h1>
+                  <div class="col-2-icon">
+                    <i class="uil uil-angle-down"></i>
+                  </div>
+                </div>
+                <div class="col-2-sel">
+                  <h1>Size</h1>
+                  <div class="col-2-icon">
+                    <i class="uil uil-angle-down"></i>
+                  </div>
+                </div>
+                <div class="col-2-sel">
+                  <h1>3</h1>
+                  <div class="col-2-icon">
+                    <i class="uil uil-angle-down"></i>
+                  </div>
+                </div>
+                <div class="col-2-salary">
+                  <h1>Total</h1>
+                  <h1>$265</h1>
+                </div>
+                <div class="buy">
+                  <a href="#">Buy Now</a>
+                </div>
+                <div class="add">
+                  <img
+                    src="img/Shopping cart simple 1.png"
+                    alt=""
+                  />
+                  <a href="#"> add to cart </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end banner -->
+    </div>
+  </body>
+</html>
